@@ -22,6 +22,7 @@ public class HashMap_location_of_once_character_50 {
         for (int i = 0; i < str.length(); i++) {
             if (cnts[str.charAt(i)] == 1)
                 return i;
+//                return s.charAt(i);
         }
         return -1;
     }
