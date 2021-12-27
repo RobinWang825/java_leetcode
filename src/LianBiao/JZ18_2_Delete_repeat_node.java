@@ -20,8 +20,7 @@ public class JZ18_2_Delete_repeat_node {
             duplication = duplication.next;
         }
     }
-    // 解法1：迭代解法
-
+    // 解法1：迭代解法  --  尾插法
     public static Node deleteDuplication(Node pHead) {
         // 1. 建一个「虚拟头节点」dummy 以减少边界判断，往后的答案链表会接在 dummy 后面；
         Node dummy = new Node(-1);
@@ -31,14 +30,14 @@ public class JZ18_2_Delete_repeat_node {
         while (pHead != null) {
             // 进入循环时，确保了 pHead 不会与上一节点相同
             if (pHead.next == null || pHead.next.value != pHead.value) {
-                tail.next = pHead;
-                tail = pHead;
+                tail.next = pHead; // 要插入的结点 pHead
+                tail = pHead; // 始终指向表尾
             }
             // 如果 pHead 与下一节点相同，跳过相同节点（到达「连续相同一段」的最后一位）
             while (pHead.next != null && pHead.value == pHead.next.value) pHead = pHead.next;
             pHead = pHead.next;
         }
-        tail.next = null;
+        tail.next = null; // 完成链表
         return dummy.next;
     }
 
