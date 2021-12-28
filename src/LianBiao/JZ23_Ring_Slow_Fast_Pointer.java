@@ -1,5 +1,8 @@
 package LianBiao;
 
+/**
+ * JZ23: 判断链表是否有环
+ */
 public class JZ23_Ring_Slow_Fast_Pointer {
     public static void main(String[] args) {
         // 有环

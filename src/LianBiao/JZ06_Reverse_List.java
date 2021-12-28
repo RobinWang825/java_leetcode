@@ -82,12 +82,13 @@ public class JZ06_Reverse_List {
         // 方法1：头插法
         ListNode head = new ListNode(-1); // 头结点
         while(listNode!=null){
+            //先用next保存listNode的下一个节点的信息，保证单链表不会因为失去listNode节点的原next节点而就此断裂
             ListNode meno = listNode.next; // 记录listNode的下一个结点的值 不然后面没法使用
             // System.out.println(listNode.val); // 1 2 3 4
             listNode.next = head.next;
             head.next = listNode;
             listNode = meno;
-//             listNode = listNode.next; // 为啥没有meno不行
+//             listNode = listNode.next; // 为啥没有meno不行,因为单链表 断裂了
         }
         ArrayList<Integer> ret = new ArrayList<>();
         head = head.next;
