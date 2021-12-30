@@ -5,13 +5,20 @@ import java.util.BitSet;
 /**
  * 剑指50 - 第一个只出现一次的字符
  * 在一个长为 字符串中找到第一个只出现一次的字符,并返回它的位置, 如果没有则返回 -1（需要区分大小写）.（从0开始计数）
+ * 思路1：HashMap
+ * 思路2：BitSet
  */
-public class HashMap_location_of_once_character_50 {
+public class JZ50_HashMap_location_of_once_character {
     public static void main(String[] args) {
         System.out.println(FirstNotRepeatingChar2("abaccc"));
 
     }
 
+    /**
+     * 思路1：HashMap
+     * @param str
+     * @return
+     */
     public static int FirstNotRepeatingChar(String str) {
         // ASCII 码只有 128 个字符，因此可以使用长度为 128 的整型数组来存储每个字符出现的次数。
         int[] cnts = new int[128];
@@ -27,6 +34,11 @@ public class HashMap_location_of_once_character_50 {
         return -1;
     }
 
+    /**
+     * 思路2：BitSet
+     * @param str
+     * @return
+     */
     public static int FirstNotRepeatingChar2(String str) {
         BitSet bs1 = new BitSet(128); // {}
         BitSet bs2 = new BitSet(128);

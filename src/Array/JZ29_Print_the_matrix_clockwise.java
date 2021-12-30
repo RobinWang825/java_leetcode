@@ -3,7 +3,11 @@ package Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Print_the_matrix_clockwise_29 {
+/**
+ * JZ29 顺时针打印矩阵
+ * 可以看一下JZ04: 二维数组中的查找
+ */
+public class JZ29_Print_the_matrix_clockwise {
     public static void main(String[] args) {
         int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         System.out.println(Arrays.toString(spiralOrder0(matrix)));
@@ -14,8 +18,6 @@ public class Print_the_matrix_clockwise_29 {
 
 //        ArrayList<Integer> objects = new ArrayList<>();
 //        System.out.println(objects); // []
-
-
 
     }
 
