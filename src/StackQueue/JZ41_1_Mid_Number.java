@@ -2,6 +2,9 @@ package StackQueue;
 
 import java.util.PriorityQueue;
 
+/**
+ * JZ41: 数据流的中位数（LC 295）hard
+ */
 public class JZ41_1_Mid_Number {
     public static void main(String[] args) {
         int[] nums = {5,2,3,4,1};

@@ -57,7 +57,7 @@ public class JZ7_reBuild_Tree_105 {
         return dfs1(0, 0, in.length - 1, pre, in);
     }
 
-   public static TreeNode dfs1(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
+    public static TreeNode dfs1(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
         if (preStart > preorder.length - 1 || inStart > inEnd) {
             return null;
         }
@@ -80,7 +80,7 @@ public class JZ7_reBuild_Tree_105 {
     // 力扣105题，labladong题解
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
         return labladong(preorder,0,preorder.length-1,
-                        inorder,0,inorder.length-1);
+                inorder,0,inorder.length-1);
     }
 
     private static TreeNode labladong(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
@@ -105,9 +105,9 @@ public class JZ7_reBuild_Tree_105 {
         int leftsize = index - inStart;
         // 左右递归
         root.left = labladong(preorder,preStart+1,preStart+leftsize,
-                                inorder,inStart,index-1);
+                inorder,inStart,index-1);
         root.right = labladong(preorder,preStart+leftsize+1,preEnd,
-                                inorder,index+1,inEnd);
+                inorder,index+1,inEnd);
         return root;
     }
 
